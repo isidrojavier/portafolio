@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="cuerpo.css">
+    <link rel="stylesheet" href="cabecera.css">
+
+    <title>Isidro Javier Fernandez</title>
+</head>
+<body>
+    <header>
+		<a href="#" class="logo"></a>
+		<nav>
+            <div class="control-menu">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="menu-icon"><img src="images/open-menu.png" alt=""></i>
+                </label>
+
+                <ul class="nav-items">
+                    <li><a href="#inicio" class="opcion">Inicio</a></li>
+                    <li><a href="#formacion" class="opcion">Formación</a></li>
+                    <li><a href="#experiencia" class="opcion">Experiencia</a></li>
+                    <li><a href="#portfolio" class="opcion">Portfolio</a></li>
+                    <li><a href="#contacto" class="opcion">Contacto</a></li>
+                </ul>
+            </div>
+		</nav>
+	</header>
+
+	<!-- Aquí va el cuerpo -->
+    <section>
+    <div class="contenedor-secciones">
+        <div class="seccion" id="inicio">
+          <div class="texto">
+            <h3>Hola mi nombre es <span class="neon">Isidro Javier Fernandez</span> y quiero colaborar contigo</h3>
+            <p>Mi formación y mi experiencia es amplia y actualmente participo en el proyecto Oacle ONE en Alura Latam</p>
+          </div>
+          <div class="avatar">
+            <img src="images/avatar.png">
+        </div>
+        </div>
+        <div class="seccion" id="formacion">
+          <h3>Formación</h3>
+          <div class="lenguajes">
+            <a href="#">
+                <span><img src="images/html5logo.png"/></span>
+                <div class="wave"></div>
+            </a>
+            <a href="#">
+                <span><img src="images/logocss3.png"/></span>
+                <div class="wave"></div>
+            </a>
+            <a href="#">
+                <span><img src="images/phplogo.png"/></span>
+                <div class="wave"></div>
+            </a>
+            <a href="#">
+                <span><img src="images/logosql.png"/></span>
+                <div class="wave"></div>
+            </a>
+          </div>
+        </div>
+        <div class="seccion" id="experiencia">
+          <h3>Experiencia</h3>
+          <div class="contenedorformacion">
+            <div class="box">
+                <img src="images/imagen1.png">
+            </div>
+            <div class="box">
+                <img src="images/imagen2.png">
+            </div>
+            <div class="box">
+                <img src="images/imagen3.png">
+            </div>
+            <div class="box">
+                <img src="images/imagen4.png">
+            </div>
+            <div class="box">
+                <img src="images/imagen5.png">
+            </div>
+        </div>
+        </div>
+        <div class="seccion" id="portfolio">
+          <h3>Portfolio</h3>
+          <div class="contenedor">
+            <div class="card" style="--clr:#009688;">
+                <div class="imgbox"><img src="images/img1.png"></div>
+                <div class="content">
+                    <h2>Encriptador</h2>
+                    <p>Pequeño ejercicio de un encriptador</p>
+                    <a href="https://isidrojavier.github.io/challenge1/" target="_blank">Leer más</a>
+                </div>
+            </div>
+            <div class="card" style="--clr:#ff3e7f;">
+                <div class="imgbox"><img src="images/img2.png"></div>
+                <div class="content">
+                    <h2>Parallax</h2>
+                    <p>Efecto parallax en CSS y Javascript</p>
+                    <a href="https://isidrojavier.github.io/parallaxintro/" target="_blank">Leer más</a>
+                </div>
+            </div>
+            <div class="card" style="--clr:#03a9f4;">
+                <div class="imgbox"><img src="images/img3.png"></div>
+                <div class="content">
+                    <h2>Sprites</h2>
+                    <p>Ejemplo de funcionamiento de los sprites</p>
+                    <a href="https://isidrojavier.github.io/sprites/" target="_blank">Leer más</a>
+                </div>
+            </div>
+          </div>
+        <div class="seccion" id="contacto">
+          <h3>Contacto</h3>
+          <form class="formulario" data-formulario>
+            <fieldset class="campo">
+              <label class="etiqueta" for="nombre">Nombre</label>
+              <input
+                name="nombre"
+                id="nombre"
+                class="campocompleto"
+                type="text"
+                minlength="3"
+                required
+              />
+              <span class="mensaje-error"></span>
+            </fieldset>
+    
+            <fieldset class="campo">
+              <label class="etiqueta" for="email">E-mail</label>
+              <input
+                name="email"
+                id="email"
+                class="campocompleto"
+                type="email"
+                minlength="4"
+                required
+              />
+              <span class="mensaje-error"></span>
+            </fieldset>
+            <fieldset class="campo">
+                <label class="etiqueta" for="asunto">Asunto</label>
+                <input
+                  name="asunto"
+                  id="asunto"
+                  class="campocompleto"
+                  type="text"
+                  minlength="3"
+                  required
+                />
+                <span class="mensaje-error"></span>
+              </fieldset>
+              <fieldset class="campo">
+                <label class="etiqueta" for="mensaje">Mensaje</label>
+                <textarea
+                  name="mensaje"
+                  id="mensaje"
+                  class="campocompleto"
+                  type="textarea"
+                  rows="6"
+                  cols="60"
+                  required
+                ></textarea>
+                <span class="mensaje-error"></span>
+              </fieldset>
+    
+            <fieldset class="terminos">
+              <input
+                name="terminos"
+                class="terminosinput"
+                type="checkbox"
+                required
+              />
+              <label class="terminostexto">
+                He leído y conozco las condiciones para el tratamiento de mis
+                datos descrito en las <a href="#">Políticas de Privacidad</a>.
+              </label>
+              <span class="mensaje-error"></span>
+            </fieldset>
+    
+            <div class="btformulario">
+              <input
+                value="Siguiente"
+                class="formulario__boton"
+                id="enviar"
+                data-boton-enviar
+                type="submit"
+              />
+              <span class="mensaje-error"></span>
+    
+              <input
+                    type="reset"
+                    value="Borrar"
+                    id="borrar"
+                />
+            </div>
+            
+          </form>
+        </div>
+      </div>
+      <!-- puedo poner unos iconos con las redes sociales -->
+    </section>
+    <!-- Finaliza el cuerpo-->
+    <script src="script.js"></script>
+</body>
+</html>

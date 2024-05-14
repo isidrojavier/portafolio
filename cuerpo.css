@@ -1,0 +1,356 @@
+.contenedor-secciones {
+    height: 100vh;
+   /*  overflow: auto; */  
+    scroll-snap-type: y mandatory;  
+    padding: 30px 0px;
+  }
+
+  .texto{
+    flex-grow: 2;
+    padding: 15px 15px;
+    align-items: center;
+    align-content: center;
+    max-width: 70%;
+   }
+
+  .seccion {
+    padding: 110px 0px;
+    scroll-snap-align: start;
+    min-height: 60vh;
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+/* .seccion:nth-child(1) {
+  background: #556270;
+}
+
+.seccion:nth-child(2) {
+  background: #4ecdc4;
+}
+
+.seccion:nth-child(3) {
+  background: #c7f464;
+}
+
+.seccion:nth-child(4) {
+  background: #ff6b6b;
+}
+
+.seccion:nth-child(5) {
+  background: #c44d58;
+} */
+
+.seccion h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: white;
+  padding: 20px 50px;
+} 
+
+.seccion p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+    padding: 60px 30px;
+  }
+
+  .avatar{
+    padding: 15px 15px;
+    text-align: center;
+  
+  }
+
+.avatar img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 5px solid white;
+    flex-grow: 3;
+}
+
+/* seccion 2 - formacion */
+
+.seccion:nth-child(2),
+.seccion:nth-child(3),
+.seccion:nth-child(4),
+.seccion:nth-child(5){
+  flex-flow: column;
+}
+.seccion:nth-child(2) h3,
+.seccion:nth-child(3) h3,
+.seccion:nth-child(4) h3,
+.seccion:nth-child(5) h3{
+  text-align: center;
+}
+
+.lenguajes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*     min-height: 100vh; */
+  flex-wrap: wrap;
+  }
+
+.lenguajes img{
+  width: 150px;
+  height: 225px;
+}
+
+.lenguajes a{
+  position: relative;
+  display: block;
+  padding: 10px 30px;
+  /* border: 2px solid #00aeff; */
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 4px;
+  /* color: #00aeff; */
+  color: greenyellow;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.lenguajes a span{
+  position: relative;
+  z-index: 1;
+  transition: 1s;
+}
+
+a .wave{
+  position: absolute;
+/*     top: 100%; */
+  top: calc(100% + 22px);
+  left: 0;
+  width: 100%;
+  height: 100%;
+ /*  background: #00aeff; */
+  background: greenyellow;
+  transition: 1s;
+}
+
+a:hover .wave{
+  top: 25px;
+}
+
+a .wave::before{
+  content: '';
+  position: absolute;
+  top: -22px;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background: url(images/waveverde.png);
+  animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+      background-position-x: 0;
+  }
+  100%{
+      background-position-x: 118px;
+  }
+}
+
+/* seccion 5 - contacto */
+.formulario {
+  margin: 3em auto;
+  width: 30vw;
+}
+.campo {
+  margin-bottom: 2em;
+}
+
+.etiqueta, .terminostexto {
+  font-weight: 500;
+  line-height: 20px;
+  color: white
+}
+
+.campocompleto {
+  display: block;
+  border: 2px solid #48d7ff;
+  border-radius: 20px;
+  width: 100%;
+  padding: 1em;
+  margin-top: .5em;
+
+}
+
+.formulario__boton, #borrar {
+  background-color: #48d7ff;
+  margin: 2em auto;
+  display: block;
+  border: none;
+  padding: 1em 4em;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+fieldset{
+  border: none;
+}
+
+.btformulario{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* portfolio */
+
+.contenedor {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 50px;
+}
+
+.contenedor .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  height: 300px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+
+.contenedor .card:hover{
+  height: 400px;
+}
+
+.contenedor .card .imgbox {
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.contenedor .card:hover .imgbox {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor .card .imgbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.contenedor .card .content {
+  position: absolute;
+  top: 242px;
+  width: 100%;
+  padding: 0 30px;
+  height: 30px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.contenedor .card:hover .content {
+  top: 150px;
+  height: 270px;
+}
+
+.contenedor .card .content h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--clr);
+}
+
+.contenedor .card .content p {
+  font-size: 1.05em;
+  color: var(--clr);
+}
+
+.contenedor .card .content a {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: var(--clr);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* experiencia */
+
+.contenedorformacion{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.contenedorformacion .box{
+  position: relative;
+  width: 120px;
+  height: 120px;
+  transition: 0.5s;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+}
+
+.contenedorformacion .box img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contenedorformacion:hover > :not(:hover){
+  margin: 0 -20px;
+  filter: drop-shadow(0 0 25px #000) drop-shadow(0 0 45px #000);
+  transform: perspective(500px) rotateY(45deg) scale(0.95);
+}
+
+.contenedorformacion .box:hover ~ .box{
+  transform: perspective(500px) rotateY(-45deg) scale(0.95);
+}
+
+.contenedorformacion .box:hover{
+  transform: perspective(500px) rotateY(0) scale(1.5);
+  z-index: 1000;
+}
+
+
+@media(max-width:1483px){
+    .seccion {
+        flex-direction: row-reverse;
+        flex-direction: column-reverse;
+    }
+
+    .avatar img{
+        height: 300px;
+        width: 300px;
+        /* border-radius: 50%;
+        border: 5px solid white;
+        flex-grow: 3; */
+    }
+}
